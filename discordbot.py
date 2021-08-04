@@ -18,13 +18,13 @@ async def ping(ctx):
     await ctx.send('pong')
 
 # 起動時に動作する処理
-@client.event
+@bot.command()
 async def on_ready():
     # 起動したらターミナルにログイン通知が表示される
     print('ログインしました')
 
 # メッセージ受信時に動作する処理
-@client.event
+@bot.command()
 async def on_message(message):
     # メッセージ送信者がBotだった場合は無視する
     if message.author.bot:
